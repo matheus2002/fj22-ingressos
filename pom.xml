@@ -18,7 +18,7 @@
     </properties>
 
 
-    <dependencies>
+    <dependencies>   
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -166,5 +166,12 @@
             </plugin>
         </plugins>
     </build>
+    
+    <developers>
+    	<developer>
+    	<name>M</name>
+    	<email>m@m.com</email>
+    	</developer>
+    </developers>
 
 </project>
