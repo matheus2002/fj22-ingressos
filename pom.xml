@@ -170,7 +170,9 @@
     <developers>
     	<developer>
     	<name>M</name>
-    	<email>m@m.com</email>
+ 
+    		<name>Matheus</name>
+
     	</developer>
     </developers>
 
