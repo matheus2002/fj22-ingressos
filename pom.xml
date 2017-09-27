@@ -166,5 +166,12 @@
             </plugin>
         </plugins>
     </build>
+    
+    <developers>
+    	<developer>
+    		<name>Matheus</name>
+    		<email>meuemail@matheus.com</email>
+    	</developer>
+    </developers>
 
 </project>
