@@ -21,7 +21,7 @@ public class SessaoDao {
 		
 	}
 	
-	public List<Sessao> buscarSessoesDeSala(Sala sala){
+	public List<Sessao> buscaSessoesDaSala(Sala sala){
 		
 		return manager.createQuery("Select s from Sessao s where s.sala = :sala", Sessao.class)
 				.setParameter("sala",sala)
