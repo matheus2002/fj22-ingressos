@@ -64,6 +64,13 @@ public class Sala {
     public void setNome(String nome) {
         this.nome = nome;
     }
+    
+    public BigDecimal getPreco() {
+		return preco;
+	}
+    public void setPreco(BigDecimal preco) {
+		this.preco = preco;
+	}
 
 
     public void add(Lugar lugar) {
@@ -89,8 +96,5 @@ public class Sala {
         Optional<Lugar> optional = this.lugares.stream().filter((x) -> fileira.equals(x.getFileira()) && posicao.equals(x.getPosicao())).findFirst();
         return optional.get().getId();
     }
-	public  BigDecimal getPreco() {
-		// TODO Auto-generated method stub
-		return this.preco;
-	}
+
 }

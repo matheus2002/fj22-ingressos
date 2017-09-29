@@ -24,4 +24,10 @@ public class SessaoTest {
 		
 		Assert.assertEquals(somaDosPrecosDaSalaEFilme, sessao.getPreco());
 	}
+	
+	
+	@Test
+	public void deveColocarPrecoDaSessaoSomenteComSalaSePrecoDoFilmeNaoExistir(){
+		
+	}
 }

@@ -68,8 +68,13 @@ public class Filme {
         this.genero = genero;
     }
 
-	public BigDecimal getPreco() {
-		// TODO Auto-generated method stub
-		return this.preco;
+    
+    public BigDecimal getPreco() {
+		return preco;
 	}
+    
+    public void setPreco(BigDecimal preco) {
+		this.preco = preco;
+	}
+    
 }

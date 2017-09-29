@@ -17,7 +17,7 @@ public class SessaoDao {
 	private EntityManager manager;
 		
 	public void save(Sessao sessao){
-		manager.persist(sessao);
+		manager.merge(sessao);
 		
 	}
 	
