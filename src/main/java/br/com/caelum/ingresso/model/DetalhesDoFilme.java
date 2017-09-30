@@ -17,7 +17,7 @@ public class DetalhesDoFilme {
 	@JsonProperty("Director")
 	private String diretores;
 	
-	@JsonProperty("Writers")
+	@JsonProperty("Writer")
 	private String escritores;
 	
 	@JsonProperty("Actors")

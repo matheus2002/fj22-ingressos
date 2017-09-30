@@ -15,7 +15,7 @@ public class ImdbClient {
 	
 	private Logger logger = Logger.getLogger(ImdbClient.class);
 	
-	public Optional<DetalhesDoFilme> request(Filme filme){
+	public <T>Optional<T> request(Filme filme,Class<T> tclass){
 		
 		RestTemplate client= new RestTemplate();
 		
@@ -23,8 +23,7 @@ public class ImdbClient {
 		
 		String url = String.format("http://imdb-fj22.herokuapp.com/imdb?title=%s", titulo);
 		try{
-			DetalhesDoFilme detlhesDoFilme = client.getForObject(url,DetalhesDoFilme.class);
-			return Optional.of(detlhesDoFilme);
+			return Optional.of(client.getForObject(url,tclass));
 		}catch(RestClientException e){
 			logger.error(e.getMessage(),e);
 			return Optional.empty();
