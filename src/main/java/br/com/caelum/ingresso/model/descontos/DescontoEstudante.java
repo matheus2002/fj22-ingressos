@@ -11,5 +11,8 @@ public class DescontoEstudante implements Desconto{
 		return precoOriginal.divide(metade);
 	}
 
-	
+	public String getDescricao(){
+		return "Desconto Estudante";
+		
+	}
 }

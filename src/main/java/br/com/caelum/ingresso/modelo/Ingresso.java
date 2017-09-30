@@ -2,20 +2,23 @@ package br.com.caelum.ingresso.modelo;
 
 import java.math.BigDecimal;
 
+import br.com.caelum.ingresso.model.Lugar;
 import br.com.caelum.ingresso.model.Sessao;
-import br.com.caelum.ingresso.model.descontos.Desconto;
+import br.com.caelum.ingresso.model.descontos.SemDesconto.TipoDeIngresso;
 
 public class Ingresso {
 
-	Sessao sessao;
+	private Sessao sessao;
 	private BigDecimal preco;
-	
+	private Lugar lugar;
+	private TipoDeIngresso  tipoDeIngresso;
 	public Ingresso(){}
 	
-	public Ingresso(Sessao sessao, Desconto tipoDeDesconto){
-		
+	public Ingresso(Sessao sessao, TipoDeIngresso tipoDeIngresso,Lugar lugar){
+		this.lugar=lugar;
 		this.sessao =sessao;
-		this.preco = tipoDeDesconto.aplicarDescontoSobre(sessao.getPreco());
+		this.tipoDeIngresso=tipoDeIngresso;
+		this.preco = this.tipoDeIngresso.aplicarDesconto(sessao.getPreco());
 	}
 
 	public Sessao getSessao() {

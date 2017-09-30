@@ -18,4 +18,9 @@ public class DescontodeTrintaPorCentoParaBancos implements Desconto{
 		
 	}
 	
+	public String getDescricao(){
+		return "Desconto Banco";
+		
+	}
+	
 }
